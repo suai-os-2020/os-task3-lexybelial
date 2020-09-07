@@ -13,8 +13,6 @@
 #include <unistd.h> // for usleep
 
 #endif
-#include <list>
-
 
 
 HANDLE lock;

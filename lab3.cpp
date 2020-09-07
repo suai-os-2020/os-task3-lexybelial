@@ -19,20 +19,20 @@
 
 HANDLE lock;
 HANDLE semaphore_a,
-        semaphore_b,
-        semaphore_c,
-        semaphore_d,
-        semaphore_e,
-        semaphore_f,
-        semaphore_h,
-        semaphore_g,
-        semaphore_p,
-        semaphore_k,
-        semaphore_m,
-        semaphore_n,
-        semaphore_p1,
-        semaphore_k1,
-        semaphore_m1;
+semaphore_b,
+semaphore_c,
+semaphore_d,
+semaphore_e,
+semaphore_f,
+semaphore_h,
+semaphore_g,
+semaphore_p,
+semaphore_k,
+semaphore_m,
+semaphore_n,
+semaphore_p1,
+semaphore_k1,
+semaphore_m1;
 
 
 
@@ -320,9 +320,9 @@ int lab3_init() {
     DWORD ThreadID;
     HANDLE aThread[14];
     lock = CreateMutex(
-            NULL,              // default security attributes
-            FALSE,             // initially not owned
-            NULL);             // unnamed mutex
+        NULL,              // default security attributes
+        FALSE,             // initially not owned
+        NULL);             // unnamed mutex
     if (lock == NULL) {
         std::cerr << "CreateMutex error: " << GetLastError() << '\n';
         return 1;
@@ -471,7 +471,6 @@ int lab3_init() {
     CloseHandle(semaphore_p);
     CloseHandle(semaphore_k);
     CloseHandle(semaphore_m);
-    CloseHandle(semaphore_r);
 
     return 0;
 }
